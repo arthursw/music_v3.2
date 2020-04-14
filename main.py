@@ -38,7 +38,7 @@ parser.add_argument('-y', '--normedNyul', action='store_true', help='Use nyul no
 parser.add_argument('-e', '--skipExamPreparation', action='store_true', help='Skip the exam preparation (registration, mask, NL means, N4 bias correction). Note: the exam images must be named as prepared by the examPreparation script. Use this if you already prepared your images, or name your images as if they were prepared but keep the original image names in the .json data description file.')
 parser.add_argument('-p', '--skipPreprocessing', action='store_true', help='Skip the preprocessing (mask and Nyul strandardization from uspio Atlas and resampling). Same note as for the skip exam preparation option.')
 parser.add_argument('-n', '--nbThreads', required=False, type=int, help='Number of execution threads (default: 0 = all cores).', default=0)
-parser.add_argument('-m', '--model', default="t1_flair_1608_ce_noDenoising_noNorm_upsampleAnima_rev1", help='Model name.')
+parser.add_argument('-m', '--model', default="t1_flair_1608_ce_noNorm_upsampleAnima_rev1", help='Model name.')
 parser.add_argument('-a', '--all', action='store_true', help='Train the model with training data, then test it with testing data.')
 
 args = parser.parse_args()
