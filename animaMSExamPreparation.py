@@ -86,7 +86,7 @@ def process(reference, flair, t1, t1_gd="", t2="", outputFolder=tempfile.gettemp
         call(biasCorrectionCommand)
 
         nlmSecondImage = os.path.join(tmpFolder, "SecondImage_unbiased_nlm.nrrd")
-        nlmCommand = [animaNLMeans, "-i", unbiasedSecondImage, "-o", nlmSecondImage, "-n", "3"]
+        nlmCommand = [animaNLMeans, "-i", unbiasedSecondImage, "-o", nlmSecondImage, "-n", "3", "-p", "8"]
         call(nlmCommand)
 
         outputPreprocessedFile = os.path.join(tmpFolder, inputPrefix + "_preprocessed.nrrd")
